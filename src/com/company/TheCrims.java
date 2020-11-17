@@ -64,7 +64,8 @@ public class TheCrims {
             try {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"menu-robbery\"]")));
                 Thread.sleep(1000);
-                driver.findElement(By.xpath("//*[@id=\"menu-robbery\"]")).click();
+//                driver.findElement(By.xpath("//*[@id=\"menu-robbery\"]")).click();
+                driver.get(("https://www.thecrims.com/newspaper#/robberies"));
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"singlerobbery-select-robbery\"]")));
                 Thread.sleep(1000);
                 Select robber = new Select(driver.findElement(By.xpath("//*[@id=\"singlerobbery-select-robbery\"]")));
