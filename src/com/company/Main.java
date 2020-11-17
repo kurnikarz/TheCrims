@@ -94,6 +94,6 @@ public class Main {
     public static void main(String[] args) throws InterruptedException, IOException, AWTException {
         TheCrims theCrims = new TheCrims("TestSel","4a452063b62b");
         theCrims.zaloguj();
-        theCrims.rabunek(2,0);
+        theCrims.rabunek(12,0);
     }
 }
