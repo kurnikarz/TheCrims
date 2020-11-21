@@ -63,24 +63,24 @@ public class TheCrims {
         for (int i = 0; i < loop; i++) {
             try {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"menu-robbery\"]")));
-                Thread.sleep(1000);
+                Thread.sleep(250);
 //                driver.findElement(By.xpath("//*[@id=\"menu-robbery\"]")).click();
                 driver.get(("https://www.thecrims.com/newspaper#/robberies"));
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"singlerobbery-select-robbery\"]")));
-                Thread.sleep(1000);
+                Thread.sleep(250);
                 Select robber = new Select(driver.findElement(By.xpath("//*[@id=\"singlerobbery-select-robbery\"]")));
                 robber.selectByIndex(idRabunku);
                 WebElement full = driver.findElement(By.xpath("//*[@id=\"full\"]"));
                 if (!full.isSelected())
                     full.click();
-                Thread.sleep(1000);
+                Thread.sleep(250);
                 driver.findElement(By.xpath("//*[@id=\"singlerobbery-rob\"]")).click();
                 try {
                     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[4]/div/table/tbody/tr/td[1]/div[2]/table/tbody/tr/td/div[2]/div/div[3]/div[3]/div/div/div/div")));
                 } catch (Exception e) {
 
                 }
-                Thread.sleep(1000);
+                Thread.sleep(250);
                 this.cpaj();
             } catch (Exception e) {
                 rabunek(idRabunku,ileRazy);
@@ -92,7 +92,7 @@ public class TheCrims {
     public void cpaj() throws InterruptedException {
         driver.get("https://www.thecrims.com/newspaper#/nightlife/nightclub");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"content_middle\"]/div/div[3]/div[1]")));
-        Thread.sleep(1000);
+        Thread.sleep(250);
         try {
 //            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[4]/div/table/tbody/tr/td[1]/div[2]/table/tbody/tr/td/div[2]/div/div[3]/div[2]/ul[2]/li[1]/div/div[2]/button")));
 //            Thread.sleep(1000);
@@ -109,7 +109,7 @@ public class TheCrims {
             }
         }
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[4]/div/table/tbody/tr/td[1]/div[2]/table/tbody/tr/td/div[2]/div/div[3]/table[2]/tbody/tr/td[4]/button")));
-        Thread.sleep(1000);
+        Thread.sleep(250);
         driver.findElement(By.xpath("/html/body/div[2]/div[4]/div/table/tbody/tr/td[1]/div[2]/table/tbody/tr/td/div[2]/div/div[3]/table[2]/tbody/tr/td[4]/button")).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[4]/div/table/tbody/tr/td[1]/div[2]/table/tbody/tr/td/div[2]/div/div[2]/div")));
         try {
